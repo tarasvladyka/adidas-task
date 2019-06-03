@@ -1,6 +1,6 @@
 
 
-# Shortest route search app
+# Fastest route search app
 
 This application designed to search the fastest route between citites using **jgrapht** library and **Dijkstra** algo.
 Application consists of 3 services:
@@ -10,8 +10,10 @@ Application consists of 3 services:
 3. **discovery-service** (used to register and discover  microservices)
 
 Application build using Spring Boot and Spring cloud(Netflix Eureka) + H2 in-memory database. Also swagger available as a API documentation.
-Technologies used:
-- Spring boot 2.1.5
+
+## Technologies used
+
+ - Spring boot 2.1.5
 - Spring cloud netflix eureka (Greenwich.SR1 version)
 - java 8
 - maven 3.3
@@ -29,11 +31,11 @@ In order to run this application you will need:
 - Docker(optional)
 
 
-## Build
+### Build
  - In order to build the components from command line, go to root folder and execute next command:
 	`mvn clean package`
 	
-## Run
+### Run
  - You can either run it as docker multicontainer app using:
    	`docker-compose up` 
    	
