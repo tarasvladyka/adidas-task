@@ -9,8 +9,6 @@ Application consists of 3 services:
 2. **route-service** (provides ability to search the fastest route, by time and connections between cities)
 3. **discovery-service** (used to register and discover  microservices)
 
-Application build using Spring Boot and Spring cloud(Netflix Eureka) + H2 in-memory database. Also swagger available as a API documentation.
-
 ## Technologies used
 
  - Spring boot 2.1.5
