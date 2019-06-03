@@ -9,7 +9,7 @@ import routeservice.builder.CityConnectionsGraphBuilder;
 import routeservice.dto.CityConnection;
 import routeservice.dto.RouteDetails;
 import routeservice.enums.RouteType;
-import routeservice.exception.handler.CompileRouteException;
+import routeservice.exception.CompileRouteException;
 import routeservice.mapper.CustomObjectMapper;
 import routeservice.service.CityConnectionService;
 import routeservice.service.RouteService;

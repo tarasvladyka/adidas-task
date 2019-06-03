@@ -3,6 +3,9 @@ package cityconnectionservice.controller;
 import cityconnectionservice.dto.CityConnectionsResponse;
 import cityconnectionservice.domain.CityConnection;
 import cityconnectionservice.service.CityConnectionService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +19,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="/connections")
-public class CityConnectionController implements SwaggerHat4CityConnectionController {
+@Api(value="City connections", tags = "city connection", description="Operations with departure/arrival data for trips between cities")
+public class CityConnectionController {
 
     private static Logger logger = LoggerFactory.getLogger(CityConnectionController.class);
 
@@ -28,7 +32,8 @@ public class CityConnectionController implements SwaggerHat4CityConnectionContro
     }
 
     @GetMapping
-    public CityConnectionsResponse getCityConnections(@RequestParam(required = false) String from)  {
+    @ApiOperation(value="Get connections from the specified city(if no params - returns all connections)")
+    public CityConnectionsResponse getCityConnections(@ApiParam(value = "City code") @RequestParam(required = false) String from)  {
         if(StringUtils.isEmpty(from)) {
             List<CityConnection> cityConnections = cityConnectionService.getAll();
             logger.info("Getting all connections, found " + cityConnections.size() + " connections");

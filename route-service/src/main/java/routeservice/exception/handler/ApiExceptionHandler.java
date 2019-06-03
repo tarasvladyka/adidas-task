@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import routeservice.dto.ApiResponse;
 import routeservice.dto.RouteDetails;
 import routeservice.enums.ApiStatusCode;
+import routeservice.exception.CompileRouteException;
 
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler{

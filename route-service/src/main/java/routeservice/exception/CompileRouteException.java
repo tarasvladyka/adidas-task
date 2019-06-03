@@ -1,4 +1,4 @@
-package routeservice.exception.handler;
+package routeservice.exception;
 
 public class CompileRouteException extends RuntimeException{
 
