@@ -50,4 +50,5 @@ You can try the services through swagger:
 
 **route-service**: `localhost:9610/swagger-ui.html`
 
-**discovery-service-dashboard**:  `localhost:8761`
+###  Eureka dashboard
+Eureka dashboard can be accessed using link:  `localhost:8761`
