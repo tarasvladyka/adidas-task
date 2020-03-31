@@ -14,7 +14,7 @@ Application consists of 2 micro-services and discovery service:
 
  - Spring boot 2.1.5
 - Spring cloud netflix eureka (Greenwich.SR1 version)
-- java 8
+- **java 11**
 - maven 3.3
 - docker engine 18.09.2
 - h2 database
@@ -25,7 +25,7 @@ Application consists of 2 micro-services and discovery service:
 ### Prerequisites
 In order to run this application you will need:
 
-- JDK 8
+- **JDK 11**
 - Maven 3.3 or later	
 - Docker(optional)
 
@@ -35,17 +35,25 @@ In order to run this application you will need:
 	`mvn clean package`
 	
 ### Run
-1. You can run this app using one of the ways:
-	 - As docker multicontainer app using:
-		`docker-compose up` 
+1. Initial DB data to make app working located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts
+2. App uses embedded DB, so you dont have to worry about setuping external DB
 
-	 - Separately, as jar files from console(make
-	   sure, run the **discovery-service** first, then the **connection-service,**
-	   and **route-service**) 
-	   `java -jar <path-to-jar>`
-	 - From your IDE by just  starting the `main` methods of each service(keep the order, see prev point)
-2. Initial data needed to get app work located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts
-3. App uses embedded DB, so you don't have to worry about setuping external DB
+1. You can run this app using one of the ways:
+ - Using docker: 
+	- Make sure your docker is started
+	- **Make sure that docker setting is enabled !**
+	 	`Expose daemon on tcp://localhost:2375 without TLS`
+		
+	- Run `mvn clean package` from **root directory** (this will build docker images for all services). 
+	- Wait till all images are built
+	
+	- Run `docker-compose up`  from **root directory**(this command will start all the services)
+	- Wait till services are started
+	
+	- Now you are good to go and interact with the app
+
+ - 	Or From your IDE by just  starting the `main` methods of each service(keep the order, see prev point)
+
  
 ### How to use the app
 1.Firstly execute:
