@@ -72,8 +72,7 @@ via REST client, or swagger to see the list of connections between cities. You w
       "departureTime": "2019-05-29T15:00:00",
       "arrivalTime": "2019-05-29T16:00:00"
     }
-	....
-	....
+    ...
   ]
 }
 ```
