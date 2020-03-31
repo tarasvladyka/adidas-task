@@ -35,7 +35,7 @@ In order to run this application you will need:
 	`mvn clean package`
 	
 ### Run
-You can run this app using one of the ways:
+1. You can run this app using one of the ways:
  - As docker multicontainer app using:
    	`docker-compose up` 
    	
@@ -44,8 +44,8 @@ You can run this app using one of the ways:
    and **route-service**) 
    `java -jar <path-to-jar>`
  - From your IDE by just  starting the `main` methods of each service(keep the order, see prev point)
- - Initial data needed to get app work located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts
- - App uses embedded DB, so you don't have to worry about setuping external DB
+2. Initial data needed to get app work located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts
+3. App uses embedded DB, so you don't have to worry about setuping external DB
  
 ### How to use the app
 1.Firstly execute:
@@ -112,7 +112,7 @@ This will give you the **shortest route by time** travelling between `LVIV` and 
 ```
 
 ### API documentation(Swagger)
-You can try the services through swagger:
+You can try to interact with the services through swagger:
 
 **city-connection-service**: `localhost:9600/swagger-ui.html`
 
