@@ -47,6 +47,13 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.10</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <dockerDirectory>${project.basedir}</dockerDirectory>
@@ -56,6 +63,7 @@
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
                     </imageTags>
+
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
