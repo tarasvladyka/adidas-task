@@ -34,7 +34,7 @@ In order to run this application you will need:
 
 You can run this app using one of 2 ways:
  - 	**Faster way**: from your favourite **IDE** by just  starting the `main` methods of each service(keep the order, see prev point)
- - 	**Slower way**:Or using **docker**(depends how much dependent images already present on your PC): 
+ - 	**Slower way**: using **docker**(depends how much dependent images already present on your PC): 
 	- Make sure your docker is started
 	
 	- **Make sure that following docker setting is enabled !**
