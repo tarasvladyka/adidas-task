@@ -126,4 +126,4 @@ You can try to interact with the services through swagger:
 **route-service**: `localhost:9610/swagger-ui.html`
 
 ###  Eureka dashboard
-Eureka dashboard can be accessed using link:  `localhost:8761`
+Eureka dashboard can be accessed by this url:  `localhost:8761`
