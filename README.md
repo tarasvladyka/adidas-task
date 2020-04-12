@@ -29,19 +29,16 @@ In order to run this application you will need:
 - Maven 3.3 or later	
 - Docker(optional)
 
-
-### Build
- - In order to build the components from command line, go to **root** folder and execute next command:
-	`mvn clean package`
 	
 ### Run
-1. Initial DB data to make app working located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts
-2. App uses embedded DB, so you dont have to worry about setuping external DB
 
-1. You can run this app using one of the ways:
- - Using docker: 
+You can run this app using one of 2 ways:
+ - 	**Fast**: from your favourite **IDE** by just  starting the `main` methods of each service(keep the order, see prev point)
+ - 	**Slower**: using **docker**(depends how much dependent images already present on your PC): 
 	- Make sure your docker is started
-	- **Make sure that docker setting is enabled !**
+	
+	- **Make sure that following docker setting is enabled !**
+	
 	 	`Expose daemon on tcp://localhost:2375 without TLS`
 		
 	- Run `mvn clean package` from **root directory** (this will build docker images for all services). 
@@ -52,7 +49,10 @@ In order to run this application you will need:
 	
 	- Now you are good to go and interact with the app
 
- - 	Or From your IDE by just  starting the `main` methods of each service(keep the order, see prev point)
+#### Initial data and Database:
+- Initial DB data to make app working, already located in `/resources/data.sql` in `city-connection-service`. These scripts are executed when app starts. 
+- App uses embedded DB, so you don`t have to worry about setuping external DB and initial data
+
 
  
 ### How to use the app
